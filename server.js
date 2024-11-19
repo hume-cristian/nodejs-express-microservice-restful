@@ -19,27 +19,27 @@ let usersList = {
     },
   };
 
-app.get('/nodejs/express/api/v1/users', (req, res) => {
+app.get('/nodejs/api/v1/users', (req, res) => {
   return res.send(Object.values(usersList));
 });
 
-app.get('/nodejs/express/api/v1/users/:userId', (req, res) => {
+app.get('/nodejs/api/v1/users/:userId', (req, res) => {
   return res.send(usersList[req.params.userId]);
 });
 
-app.post('/nodejs/express/api/v1/users', (req, res) => {
+app.post('/nodejs/api/v1/users', (req, res) => {
   return res.send('POST HTTP method on user resource');
 });
 
-app.put('/nodejs/express/api/v1/users/:userId', (req, res) => {
+app.put('/nodejs/api/v1/users/:userId', (req, res) => {
   return res.send(`PUT HTTP method on user/${req.params.userId} resource`,);
 });
 
-app.patch('/nodejs/express/api/v1/users/:userId', (req, res) => {
+app.patch('/nodejs/api/v1/users/:userId', (req, res) => {
   return res.send(`PATCH HTTP method on user/${req.params.userId} resource`,);
 });
 
-app.delete('/nodejs/express/api/v1/users/:userId', (req, res) => {
+app.delete('/nodejs/api/v1/users/:userId', (req, res) => {
   return res.send(`DELETE HTTP method on user/${req.params.userId} resource`,);
 });
 
